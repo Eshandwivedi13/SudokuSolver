@@ -10,3 +10,8 @@ The project is a Sudoku solver that aims to replicate the classic experience of 
 *Check Moves Button*: Verifies the correctness of your current moves and highlights any errors.
 
 The Sudoku grid consists of 9 rows and 9 columns, represented as buttons that you can interact with to input your chosen digits. This Sudoku solver has been built from the ground up to provide an enjoyable and authentic Sudoku-solving experience
+
+**ScreenShot** -
+<br/>
+<br/>
+![image](https://github.com/Eshandwivedi13/SudokuSolver/assets/79198616/ad2c345b-83e1-4953-94e9-c5421b562e3f)
