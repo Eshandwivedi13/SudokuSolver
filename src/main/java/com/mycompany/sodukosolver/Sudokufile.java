@@ -26,7 +26,7 @@ public class Sudokufile extends javax.swing.JFrame {
     
      private String turn = "1";//this variable will store the value of selection(whatever num is selected)
     private boolean globalflag = true;//it will be useful later
-    private String solvedBoard[][]= {//created this 2d array which will store all the moves, contains all the values whether it is prefiled or not
+     private String solvedBoard[][]= {//created this 2d array which will store all the moves, contains all the values whether it is prefiled or not
     {"2","9","8","5","1","6","7","3","4"},
     {"4","1","3","2","7","8","5","6","9"},
     {"7","5","6","3","4","9","1","2","8"},
@@ -37,6 +37,7 @@ public class Sudokufile extends javax.swing.JFrame {
     {"3","7","5","9","6","4","8","1","2"},
     {"6","8","9","7","2","1","4","5","3"},
     };
+    
     
     //below func will be encountered by all 9 boxes(Which are there to fill the values)
     private void AssignTurn(JButton btn){//this function is responsible for putting value in empty box
@@ -58,14 +59,14 @@ public class Sudokufile extends javax.swing.JFrame {
             jButton4,jButton7,jButton9,jButton10,jButton14,jButton15,
             jButton17,jButton19,jButton20,jButton21,
             jButton22,jButton24,jButton26,jButton32,jButton33,jButton35,
-            jButton37,jButton38,jButton44,jButton43,jButton47,jButton49,
+            jButton39,jButton38,jButton44,jButton43,jButton47,jButton49,
             jButton50,jButton56,jButton58,jButton61,jButton62,jButton63,
             jButton65,jButton67,jButton68,jButton69,jButton73,jButton75,
             jButton78
         };//those buttons who are predefined not editable are stored here
         
-        JButton btns[][] = 
-        {//this array is storing name of editable buttons
+         JButton btns[][] = 
+        {//the array is storing number of editable buttons
             {jButton1,jButton2,jButton3,jButton10,jButton11,jButton12,jButton19,jButton20,jButton21},
             {jButton4,jButton5,jButton6,jButton13,jButton14,jButton15,jButton22,jButton23,jButton24},
             {jButton7,jButton8,jButton9,jButton16,jButton17,jButton18,jButton25,jButton26,jButton27},
@@ -101,17 +102,17 @@ public class Sudokufile extends javax.swing.JFrame {
     
     private void SeeSolution(){//this func fills the correct solution
         
-        JButton predefinedBtns [] = { //these are already filled values
+       JButton predefinedBtns [] = { //these are already filled values
             jButton4,jButton7,jButton9,jButton10,jButton14,jButton15,
             jButton17,jButton19,jButton20,jButton21,
             jButton22,jButton24,jButton26,jButton32,jButton33,jButton35,
-            jButton37,jButton38,jButton44,jButton43,jButton47,jButton49,
+            jButton39,jButton38,jButton44,jButton43,jButton47,jButton49,
             jButton50,jButton56,jButton58,jButton61,jButton62,jButton63,
             jButton65,jButton67,jButton68,jButton69,jButton73,jButton75,
             jButton78
         };
         
-        JButton btns[][] = //these values are filled by player
+         JButton btns[][] = //these values are filled by players
         {
             {jButton1,jButton2,jButton3,jButton10,jButton11,jButton12,jButton19,jButton20,jButton21},
             {jButton4,jButton5,jButton6,jButton13,jButton14,jButton15,jButton22,jButton23,jButton24},
@@ -255,7 +256,6 @@ public class Sudokufile extends javax.swing.JFrame {
         jButton53 = new javax.swing.JButton();
         jButton54 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jButton37 = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
         jButton39 = new javax.swing.JButton();
         jButton40 = new javax.swing.JButton();
@@ -264,6 +264,7 @@ public class Sudokufile extends javax.swing.JFrame {
         jButton43 = new javax.swing.JButton();
         jButton44 = new javax.swing.JButton();
         jButton45 = new javax.swing.JButton();
+        jButton37 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jButton28 = new javax.swing.JButton();
         jButton29 = new javax.swing.JButton();
@@ -570,12 +571,6 @@ public class Sudokufile extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton37.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton37ActionPerformed(evt);
-            }
-        });
-
         jButton38.setBackground(new java.awt.Color(210, 230, 65));
         jButton38.setText("3");
         jButton38.addActionListener(new java.awt.event.ActionListener() {
@@ -628,6 +623,12 @@ public class Sudokufile extends javax.swing.JFrame {
             }
         });
 
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -661,10 +662,11 @@ public class Sudokufile extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton41, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -897,10 +899,10 @@ public class Sudokufile extends javax.swing.JFrame {
                         .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -1686,13 +1688,6 @@ public class Sudokufile extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton54ActionPerformed
 
-    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
-        // TODO add your handling code here:
-        jButton37.setText(turn);
-        jButton37.setBackground(white);
-
-    }//GEN-LAST:event_jButton37ActionPerformed
-
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(this, "This place is already allocated", "Message", JOptionPane.INFORMATION_MESSAGE);
@@ -2163,6 +2158,12 @@ public class Sudokufile extends javax.swing.JFrame {
         jButton72.setBackground(white);
 
     }//GEN-LAST:event_jButton72ActionPerformed
+
+    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+        // TODO add your handling code here:
+         jButton37.setText(turn);
+        jButton37.setBackground(white);
+    }//GEN-LAST:event_jButton37ActionPerformed
 
     /**
      * @param args the command line arguments
